@@ -1,8 +1,5 @@
 import sys, os
-import time
-import cv2
 import pyautogui
-import numpy as np
 import multiprocessing
 script_dir = sys.path[0]
 photo = script_dir + "\\images\\"
@@ -97,6 +94,9 @@ if __name__ == '__main__':
   p1.start()
   p2.start()
   p3.start()
-  p1.join()
-  p2.join()
-  p3.join()
+  try:
+      p1.join()
+      p2.join()
+      p3.join()
+  except KeyboardInterrupt:
+      print("KeyboardInterrupt: Stopping the script.")
