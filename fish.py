@@ -1,4 +1,4 @@
-import sys, os
+import sys
 import pyautogui
 import multiprocessing
 script_dir = sys.path[0]
